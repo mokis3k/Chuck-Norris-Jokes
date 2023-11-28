@@ -1,0 +1,66 @@
+/* joke__block */
+/* joke__fav__button */
+/* show */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 0 20px;
+}
+li {
+  list-style-type: none;
+}
+
+.jokes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container {
+  width: 100%;
+}
+.large {
+  max-width: 600px;
+}
+.small {
+  max-width: 400px;
+}
+
+.container.large {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  padding-top: 80px;
+}
+.joke__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.joke__categories {
+  display: none;
+  flex-wrap: wrap;
+}
+.joke__categories.show {
+  display: flex;
+}
+.joke__category {
+  border: 1px solid #f8f8f8;
+  width: fit-content;
+}
+.joke__search {
+  display: none;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+}
+.joke__search.show {
+  display: initial;
+}
+.get__joke__button {
+  width: 150px;
+}

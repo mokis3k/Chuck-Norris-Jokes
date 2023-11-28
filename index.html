@@ -9,28 +9,36 @@
 </head>
 
 <body>
-    <div class="container">
-        <form id="jokeFrom">
-            <label>
-                Random <input type="radio" name="jokeType" value="random" checked>
-            </label>
-            <label>
-                From categories <input type="radio" name="jokeType" value="categories">
-                <ul id="jokeCategories"></ul>
-            </label>
-            <label>
-                Search <input type="radio" name="jokeType" value="search">
-                <input type="text" id="jokeSearch">
-            </label>
-            <button>Get a joke</button>
-        </form>
-        <div id="jokesContainer"></div>
-    </div>
+    <section class="jokes">
+        <div class="container large">
+            <div class="title">
+                <h1>Hey!</h1>
+                <h3>Let's try to find a joke for you:</h3>
+            </div>
 
+            <form id="jokeFrom" class="joke__form">
+                <label>
+                    <input type="radio" name="jokeType" value="random" checked>Random
+                </label>
+                <label>
+                    <input type="radio" name="jokeType" value="categories">From categories
+                    <ul id="jokeCategories" class="joke__categories"></ul>
+                </label>
+                <label>
+                    <input type="radio" name="jokeType" value="search">Search<br>
+                    <input type="text" id="jokeSearch" class="joke__search" placeholder="Free text search...">
+                </label>
+                <button class="get__joke__button">Get a joke</button>
+            </form>
 
-    <div class="container">
-        <div id="jokesFavContainer"></div>
-    </div>
+            <div id="jokesContainer"></div>
+        </div>
+
+        <div class="container small">
+            <div id="jokesFavContainer"></div>
+        </div>
+    </section>
+
 
     <script src="./script.js"></script>
 </body>
