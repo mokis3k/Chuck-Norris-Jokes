@@ -9,6 +9,29 @@
 </head>
 
 <body>
+    <div class="container">
+        <form id="jokeFrom">
+            <label>
+                Random <input type="radio" name="jokeType" value="random" checked>
+            </label>
+            <label>
+                From categories <input type="radio" name="jokeType" value="categories">
+                <ul id="jokeCategories"></ul>
+            </label>
+            <label>
+                Search <input type="radio" name="jokeType" value="search">
+                <input type="text" id="jokeSearch">
+            </label>
+            <button>Get a joke</button>
+        </form>
+        <div id="jokesContainer"></div>
+    </div>
+
+
+    <div class="container">
+        <div id="jokesFavContainer"></div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 
