@@ -5,9 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-}
-body {
-  padding: 0 20px;
+  font-family: "Roboto", sans-serif;
 }
 li {
   list-style-type: none;
@@ -55,7 +53,7 @@ li {
   display: none;
   border: 1px solid #333333;
   border-radius: 5px;
-  width: 100%;
+  width: calc(100% - 12px);
   padding: 5px;
 }
 .joke__search.show {
@@ -63,4 +61,18 @@ li {
 }
 .get__joke__button {
   width: 150px;
+}
+
+.joke__block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  background-color: #F8F8F8;
+  padding: 30px;
+}
+
+.container.small  {
+  display: flex;
+  flex-direction: column;
 }

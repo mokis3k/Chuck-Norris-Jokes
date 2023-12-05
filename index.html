@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CN Jokes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -26,7 +29,7 @@
                 </label>
                 <label>
                     <input type="radio" name="jokeType" value="search">Search<br>
-                    <input type="text" id="jokeSearch" class="joke__search" placeholder="Free text search...">
+                    <input type="text" id="jokeSearch" class="joke__search large" placeholder="Free text search...">
                 </label>
                 <button class="get__joke__button">Get a joke</button>
             </form>
@@ -35,6 +38,7 @@
         </div>
 
         <div class="container small">
+            <h3>Favourite</h3>
             <div id="jokesFavContainer"></div>
         </div>
     </section>
