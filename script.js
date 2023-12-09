@@ -92,13 +92,26 @@ const renderJoke = (joke) => {
   });
   jokeBlock.append(jokeFavBtn);
 
+  const jokeBlockId = document.createElement("span");
+  jokeBlockId.className = "joke__block__id";
+  const idLink = document.createElement("a");
+  idLink.innerHTML = joke.id;
+  idLink.href = `https://api.chucknorris.io/jokes/${joke.id}`;
+  idLink.target = "_blank"
+  jokeBlockId.innerHTML = "ID: ";
+  jokeBlockId.append(idLink)
+  jokeBlock.append(jokeBlockId);
+
   const jokeBlockValue = document.createElement("p");
   jokeBlockValue.innerHTML = joke.value;
   jokeBlock.append(jokeBlockValue);
 
   if (joke.categories.length) {
     const categories = document.createElement("p");
-    categories.innerHTML = `<b>Categories</b>: ${joke.categories.join(", ")}`;
+    categories.className = "joke__block__categories";
+    categories.innerHTML = joke.categories
+      .map((cat) => cat.charAt(0).toUpperCase() + cat.slice(1))
+      .join(", ");
     jokeBlock.append(categories);
   }
 
@@ -118,7 +131,9 @@ const renderCategories = async () => {
         (cat, index) =>
           `<li class="joke__category">
       <label>
-      ${cat} <input type="radio" name="jokeCategory" value="${cat}" ${
+      ${
+        cat.charAt(0).toUpperCase() + cat.slice(1)
+      } <input type="radio" name="jokeCategory" value="${cat}" ${
             !index ? "checked" : ""
           }>
       </label>

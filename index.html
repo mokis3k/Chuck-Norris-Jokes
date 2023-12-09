@@ -14,6 +14,7 @@
 <body>
     <section class="jokes">
         <div class="container large">
+            <h2>Chuck Norris Jokes</h2>
             <div class="title">
                 <h1>Hey!</h1>
                 <h3>Let's try to find a joke for you:</h3>
@@ -21,25 +22,25 @@
 
             <form id="jokeFrom" class="joke__form">
                 <label>
-                    <input type="radio" name="jokeType" value="random" checked>Random
+                    <input type="radio" name="jokeType" value="random" checked><span>Random</span> 
                 </label>
                 <label>
-                    <input type="radio" name="jokeType" value="categories">From categories
+                    <input type="radio" name="jokeType" value="categories"><span>From categories</span> 
                     <ul id="jokeCategories" class="joke__categories"></ul>
                 </label>
                 <label>
-                    <input type="radio" name="jokeType" value="search">Search<br>
-                    <input type="text" id="jokeSearch" class="joke__search large" placeholder="Free text search...">
+                    <input type="radio" name="jokeType" value="search"><span>Search</span> <br>
+                    <input type="text" id="jokeSearch" class="joke__search" placeholder="Free text search...">
                 </label>
                 <button class="get__joke__button">Get a joke</button>
             </form>
 
-            <div id="jokesContainer"></div>
+            <div id="jokesContainer" class="jokesContainer"></div>
         </div>
 
         <div class="container small">
             <h3>Favourite</h3>
-            <div id="jokesFavContainer"></div>
+            <div id="jokesFavContainer" class="jokesFavContainer"></div>
         </div>
     </section>
 
